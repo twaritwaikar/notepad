@@ -1,8 +1,11 @@
 #include <iostream>
 
-int main()
-{
-	std::cout << "Hello World" << std::endl;
+#include "display/cli_display.h"
+#include "notepad.h"
+
+int main() {
+	Notepad notepad(std::make_unique<CLIDisplay>());
+
 
 	return 0;
 }
